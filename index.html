@@ -149,7 +149,15 @@
         }
 
         c.fillStyle = '#abc'
-        c.fillRect(this.x, this.y, this.size, this.size)
+        c.strokeStyle = '#abc'
+        c.lineWidth = 1
+        c.beginPath()
+        c.moveTo(this.x, this.y + this.size)
+        c.lineTo(this.x + this.size / 2, this.y)
+        c.lineTo(this.x + this.size, this.y + this.size)
+        c.lineTo(this.x, this.y + this.size)
+        c.stroke()
+        c.fill()
       }
 
     }
